@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --twitter-blue: 29 155 240;
+    --twitter-dark: 21 32 43;
+    --twitter-darker: 14 20 25;
+    --twitter-gray: 83 100 113;
+    --twitter-lightGray: 231 231 232;
+    --twitter-text: 255 255 255;
+    --twitter-surface: 255 255 255;
+    --twitter-surfaceText: 14 20 25;
+  }
+
+  :root[data-theme='light'] {
+    --twitter-blue: 29 155 240;
+    --twitter-dark: 247 249 249;
+    --twitter-darker: 255 255 255;
+    --twitter-gray: 83 100 113;
+    --twitter-lightGray: 239 243 244;
+    --twitter-text: 15 20 25;
+    --twitter-surface: 15 20 25;
+    --twitter-surfaceText: 255 255 255;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { background-color: theme('colors.twitter-darker'); }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background-color: theme('colors.twitter-darker');
+    color: theme('colors.twitter-text');
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button, input, textarea { font: inherit; }
+}
+
+@layer components {
+  .active {
+    @apply bg-twitter-blue/10 text-twitter-blue;
+  }
+}
